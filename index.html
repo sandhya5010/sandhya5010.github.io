@@ -9,10 +9,9 @@
 
 <style>
 :root{
-    --purple:#ff85c0;   /* Soft Pink */
-    --green:#db2777;    /* Rose Pink */
+    --pink:#ff85c0;
+    --rose:#db2777;
     --dark:#212529;
-}
 }
 
 html{
@@ -25,27 +24,28 @@ body{
 
 /* Navbar */
 .navbar{
-    background:rgba(111,66,193,0.95);
+    background:rgba(255,133,192,0.95);
 }
 
 .navbar-brand,
 .nav-link{
     color:white !important;
+    font-weight:500;
 }
 
 .nav-link:hover{
-    color:var(--green) !important;
+    color:#ffe4ef !important;
 }
 
-/* Hero */
+/* Hero Section */
 .hero{
     min-height:100vh;
     display:flex;
     align-items:center;
     background:
     linear-gradient(
-        rgba(111,66,193,0.75),
-        rgba(32,201,151,0.75)
+        rgba(255,133,192,0.80),
+        rgba(219,39,119,0.80)
     ),
     url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
 
@@ -60,22 +60,24 @@ body{
 }
 
 .hero-img{
-    width:220px;
-    height:220px;
+    width:250px;
+    height:250px;
     border-radius:50%;
     object-fit:cover;
-    border:5px solid white;
-    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    border:6px solid white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
 }
+
 .btn-custom{
     background:white;
-    color:var(--purple);
+    color:var(--rose);
     font-weight:bold;
-    padding:12px 25px;
+    padding:12px 28px;
+    border-radius:30px;
 }
 
 .btn-custom:hover{
-    background:var(--dark);
+    background:var(--rose);
     color:white;
 }
 
@@ -85,7 +87,7 @@ section{
 }
 
 .section-title{
-    color:var(--purple);
+    color:var(--rose);
     text-align:center;
     margin-bottom:40px;
     font-weight:bold;
@@ -98,33 +100,40 @@ section{
 
 /* Projects */
 .projects{
-    background:#8A64B9;
+    background:linear-gradient(
+        135deg,
+        var(--pink),
+        var(--rose)
+    );
 }
 
 .project-card{
-    transition:.3s;
+    transition:0.3s;
     border:none;
+    border-radius:15px;
 }
 
 .project-card:hover{
     transform:translateY(-10px);
 }
 
-/* Contact Info */
+/* Contact */
 .contact{
     background:#fff;
 }
 
 .contact-box{
     background:linear-gradient(
-    135deg,
-    var(--purple),
-    var(--green));
-    
+        135deg,
+        var(--pink),
+        var(--rose)
+    );
+
     color:white;
     padding:40px;
-    border-radius:15px;
+    border-radius:20px;
     text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
 
 /* Footer */
@@ -243,7 +252,7 @@ that provide great user experiences.
 
 <div class="container">
 
-<h2 class="section-title">My Projects</h2>
+<h2 class="section-title text-white">My Projects</h2>
 
 <div class="row g-4">
 
