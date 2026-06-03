@@ -1,1 +1,338 @@
-Hello welcome
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandhya Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+:root{
+    --purple:#6f42c1;
+    --green:#20c997;
+    --dark:#212529;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Segoe UI',sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    background:rgba(111,66,193,0.95);
+}
+
+.navbar-brand,
+.nav-link{
+    color:white !important;
+}
+
+.nav-link:hover{
+    color:var(--green) !important;
+}
+
+/* Hero */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(
+        rgba(111,66,193,0.75),
+        rgba(32,201,151,0.75)
+    ),
+    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:4rem;
+    font-weight:700;
+}
+
+.hero-img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid white;
+}
+
+.btn-custom{
+    background:white;
+    color:var(--purple);
+    font-weight:bold;
+    padding:12px 25px;
+}
+
+.btn-custom:hover{
+    background:var(--dark);
+    color:white;
+}
+
+/* Sections */
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    color:var(--purple);
+    text-align:center;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+/* About */
+.about{
+    background:#fff;
+}
+
+/* Projects */
+.projects{
+    background:#f8f9fa;
+}
+
+.project-card{
+    transition:.3s;
+    border:none;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+/* Contact Info */
+.contact{
+    background:#fff;
+}
+
+.contact-box{
+    background:linear-gradient(
+    135deg,
+    var(--purple),
+    var(--green));
+    
+    color:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* Footer */
+footer{
+    background:var(--dark);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#">Sandhya</a>
+
+<button class="navbar-toggler bg-light"
+type="button"
+data-bs-toggle="collapse"
+data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+
+<li class="nav-item">
+<a class="nav-link" href="#home">Home</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#projects">Projects</a>
+</li>
+
+<li class="nav-item">
+<a class="nav-link" href="#contact">Contact</a>
+</li>
+
+</ul>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section id="home" class="hero">
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+<h1>Hello, I'm Sandhya</h1>
+
+<p class="lead">
+Web Developer • Designer • Student
+</p>
+
+<p>
+I create modern and responsive websites using
+HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.
+</p>
+
+<a href="#projects" class="btn btn-custom mt-3">
+View Projects
+</a>
+</div>
+
+<div class="col-lg-6 text-center mt-5 mt-lg-0">
+<img src="https://via.placeholder.com/400"
+class="hero-img"
+alt="Profile">
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="about">
+
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+
+<p>
+I am a passionate web developer with experience in
+HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.
+I enjoy building user-friendly and responsive websites.
+</p>
+
+<p>
+My goal is to create innovative digital solutions
+that provide great user experiences.
+</p>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- Projects -->
+<section id="projects" class="projects">
+
+<div class="container">
+
+<h2 class="section-title">My Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="card project-card shadow">
+<div class="card-body">
+<h5>Portfolio Website</h5>
+<p>
+Personal portfolio website developed using
+Bootstrap and modern UI design.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card project-card shadow">
+<div class="card-body">
+<h5>College Voting System</h5>
+<p>
+Online election management system using
+PHP, MySQL and Bootstrap.
+</p>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card project-card shadow">
+<div class="card-body">
+<h5>E-Commerce Website</h5>
+<p>
+Responsive shopping website with attractive
+user interface and product management.
+</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+
+<div class="container">
+
+<h2 class="section-title">Contact Me</h2>
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="contact-box">
+
+<h4>Get In Touch</h4>
+
+<p class="mt-4">
+📧 sandhya@email.com
+</p>
+
+<p>
+📱 +91 9876543210
+</p>
+
+<p>
+📍 Kerala, India
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+<p class="mb-0">
+© 2026 Sandhya Portfolio. All Rights Reserved.
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
