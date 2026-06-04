@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sandhya Portfolio</title>
 
+<!-- Bootstrap 5 -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
 <style>
 :root{
-    --pink1:#ffd6e7;
-    --pink2:#ffb3d1;
-    --pink3:#ff85c0;
-    --pink4:#ff5fa2;
-    --pink5:#e91e63;
+    --soft-pink:#FFD6E7;
+    --rose:#E75480;
+    --light-rose:#FF8FAB;
+    --dark:#3D2C33;
     --white:#ffffff;
-    --dark:#333333;
 }
 
 html{
@@ -24,21 +26,29 @@ html{
 
 body{
     font-family:'Segoe UI',sans-serif;
+    overflow-x:hidden;
 }
 
 /* Navbar */
 .navbar{
-    background:rgba(255,133,192,0.95);
+    background:rgba(231,84,128,0.95);
+    backdrop-filter:blur(10px);
 }
 
-.navbar-brand,
+.navbar-brand{
+    color:#fff !important;
+    font-size:1.8rem;
+    font-weight:700;
+}
+
 .nav-link{
-    color:white !important;
+    color:#fff !important;
+    margin-left:15px;
     font-weight:500;
 }
 
 .nav-link:hover{
-    color:#ffe4ef !important;
+    color:var(--soft-pink) !important;
 }
 
 /* Hero Section */
@@ -48,53 +58,61 @@ body{
     align-items:center;
     background:
     linear-gradient(
-        rgba(255,133,192,0.80),
-        rgba(219,39,119,0.80)
-    ),
-    url('https://images.unsplash.com/photo-1498050108023-c5249f4df085');
-
-    background-size:cover;
-    background-position:center;
-    color:white;
+    135deg,
+    rgba(255,214,231,0.95),
+    rgba(231,84,128,0.95)
+    );
 }
 
 .hero h1{
     font-size:4rem;
     font-weight:700;
+    color:var(--dark);
+}
+
+.hero h1 span{
+    color:var(--rose);
+}
+
+.hero p{
+    font-size:1.2rem;
+    color:#555;
 }
 
 .hero-img{
-    width:250px;
-    height:250px;
-    border-radius:50%;
+    width:350px;
+    height:350px;
     object-fit:cover;
-    border:6px solid white;
-    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
 }
 
 .btn-custom{
-    background:white;
-    color:var(--rose);
-    font-weight:bold;
-    padding:12px 28px;
-    border-radius:30px;
+    background:var(--rose);
+    color:white;
+    border:none;
+    padding:12px 30px;
+    border-radius:50px;
+    font-weight:600;
 }
 
 .btn-custom:hover{
-    background:var(--rose);
+    background:var(--light-rose);
     color:white;
 }
 
-/* Sections */
+/* Section */
 section{
-    padding:90px 0;
+    padding:100px 0;
 }
 
 .section-title{
-    color:var(--rose);
     text-align:center;
-    margin-bottom:40px;
-    font-weight:bold;
+    color:var(--rose);
+    font-size:2.5rem;
+    font-weight:700;
+    margin-bottom:50px;
 }
 
 /* About */
@@ -102,50 +120,85 @@ section{
     background:#fff;
 }
 
+.about-card{
+    background:#fff7fa;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
 /* Projects */
 .projects{
-    background:linear-gradient(
-        135deg,
-        var(--pink),
-        var(--rose)
-    );
+    background:#fff0f5;
 }
 
 .project-card{
-    transition:0.3s;
     border:none;
-    border-radius:15px;
+    border-radius:20px;
+    transition:.4s;
+    overflow:hidden;
 }
 
 .project-card:hover{
     transform:translateY(-10px);
 }
 
+.project-icon{
+    font-size:3rem;
+    color:var(--rose);
+}
+
+.card-body{
+    padding:30px;
+}
+
 /* Contact */
 .contact{
-    background:#fff;
+    background:white;
 }
 
 .contact-box{
     background:linear-gradient(
-        135deg,
-        var(--pink),
-        var(--rose)
+    135deg,
+    var(--soft-pink),
+    var(--light-rose)
     );
-
-    color:white;
     padding:40px;
-    border-radius:20px;
+    border-radius:25px;
     text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-box i{
+    font-size:1.5rem;
+    color:var(--rose);
 }
 
 /* Footer */
 footer{
-    background:var(--dark);
+    background:var(--rose);
     color:white;
     text-align:center;
     padding:20px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+.hero{
+    text-align:center;
+    padding-top:80px;
+}
+
+.hero h1{
+    font-size:2.8rem;
+}
+
+.hero-img{
+    width:250px;
+    height:250px;
+    margin-top:30px;
+}
 }
 </style>
 </head>
@@ -155,16 +208,19 @@ footer{
 <nav class="navbar navbar-expand-lg fixed-top">
 <div class="container">
 
-<a class="navbar-brand fw-bold" href="#">Sandhya</a>
+<a class="navbar-brand" href="#">
+🌸 Sandhya
+</a>
 
-<button class="navbar-toggler bg-light"
+<button class="navbar-toggler bg-white"
 type="button"
 data-bs-toggle="collapse"
-data-bs-target="#menu">
+data-bs-target="#navbarNav">
 <span class="navbar-toggler-icon"></span>
 </button>
 
-<div class="collapse navbar-collapse" id="menu">
+<div class="collapse navbar-collapse" id="navbarNav">
+
 <ul class="navbar-nav ms-auto">
 
 <li class="nav-item">
@@ -184,43 +240,46 @@ data-bs-target="#menu">
 </li>
 
 </ul>
+
 </div>
 
 </div>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <section id="home" class="hero">
+
 <div class="container">
 
 <div class="row align-items-center">
 
 <div class="col-lg-6">
-<h1>Hello, I'm Sandhya</h1>
 
-<p class="lead">
-Web Developer • Designer • Student
+<h1>Hello, I'm <span>Sandhya</span></h1>
+
+<p class="my-4">
+A passionate Web Developer and Designer creating beautiful,
+responsive websites with modern technologies.
 </p>
 
-<p>
-I create modern and responsive websites using
-HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.
-</p>
-
-<a href="#projects" class="btn btn-custom mt-3">
-View Projects
+<a href="#projects" class="btn btn-custom">
+View My Work
 </a>
+
 </div>
 
-<div class="col-lg-6 text-center mt-5 mt-lg-0">
+<div class="col-lg-6 text-center">
+
 <img src="https://via.placeholder.com/400"
 class="hero-img"
 alt="Profile">
-</div>
 
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 <!-- About -->
@@ -231,20 +290,22 @@ alt="Profile">
 <h2 class="section-title">About Me</h2>
 
 <div class="row justify-content-center">
-<div class="col-lg-8 text-center">
 
-<p>
-I am a passionate web developer with experience in
-HTML, CSS, Bootstrap, JavaScript, PHP and MySQL.
-I enjoy building user-friendly and responsive websites.
-</p>
+<div class="col-lg-8">
 
-<p>
-My goal is to create innovative digital solutions
-that provide great user experiences.
+<div class="about-card text-center">
+
+<p class="lead">
+I am a creative and enthusiastic web developer with
+experience in HTML, CSS, Bootstrap, JavaScript, PHP, and MySQL.
+I enjoy designing elegant user interfaces and building
+responsive web applications.
 </p>
 
 </div>
+
+</div>
+
 </div>
 
 </div>
@@ -256,44 +317,77 @@ that provide great user experiences.
 
 <div class="container">
 
-<h2 class="section-title text-white">My Projects</h2>
+<h2 class="section-title">My Projects</h2>
 
 <div class="row g-4">
 
 <div class="col-md-4">
-<div class="card project-card shadow">
-<div class="card-body">
-<h5>Portfolio Website</h5>
+
+<div class="card project-card shadow-sm">
+
+<div class="card-body text-center">
+
+<div class="project-icon">
+<i class="bi bi-globe"></i>
+</div>
+
+<h4>Portfolio Website</h4>
+
 <p>
-Personal portfolio website developed using
-Bootstrap and modern UI design.
+Modern responsive personal portfolio website
+using Bootstrap.
 </p>
+
 </div>
+
 </div>
+
 </div>
 
 <div class="col-md-4">
-<div class="card project-card shadow">
-<div class="card-body">
-<h5>College Voting System</h5>
+
+<div class="card project-card shadow-sm">
+
+<div class="card-body text-center">
+
+<div class="project-icon">
+<i class="bi bi-person-check"></i>
+</div>
+
+<h4>Voting System</h4>
+
 <p>
-Online election management system using
-PHP, MySQL and Bootstrap.
+College election management system using
+PHP & MySQL.
 </p>
+
 </div>
+
 </div>
+
 </div>
 
 <div class="col-md-4">
-<div class="card project-card shadow">
-<div class="card-body">
-<h5>E-Commerce Website</h5>
+
+<div class="card project-card shadow-sm">
+
+<div class="card-body text-center">
+
+<div class="project-icon">
+<i class="bi bi-cart"></i>
+</div>
+
+<h4>E-Commerce</h4>
+
 <p>
-Responsive shopping website with attractive
-user interface and product management.
+Online shopping website with attractive UI
+and product management.
 </p>
+
 </div>
+
 </div>
+
 </div>
 
 </div>
@@ -315,18 +409,21 @@ user interface and product management.
 
 <div class="contact-box">
 
-<h4>Get In Touch</h4>
+<h4 class="mb-4">Let's Connect 💕</h4>
 
-<p class="mt-4">
-📧 sandhya@email.com
+<p>
+<i class="bi bi-envelope-fill"></i>
+sandhya@example.com
 </p>
 
 <p>
-📱 +91 9876543210
+<i class="bi bi-telephone-fill"></i>
++91 9876543210
 </p>
 
 <p>
-📍 Kerala, India
+<i class="bi bi-geo-alt-fill"></i>
+Kerala, India
 </p>
 
 </div>
@@ -342,7 +439,7 @@ user interface and product management.
 <!-- Footer -->
 <footer>
 <p class="mb-0">
-© 2026 Sandhya Portfolio. All Rights Reserved.
+© 2026 Sandhya Portfolio • Made with 💖
 </p>
 </footer>
 
